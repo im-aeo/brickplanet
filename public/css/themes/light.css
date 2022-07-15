@@ -1,0 +1,20 @@
+body{
+    /*overflow-x: hidden !important;*/
+}
+:root{
+    		--primary-txt-color: #E1E4EB;
+			--main-background-color: #232529;
+			--main-sidebar-color: #25272b;
+			--sidebar-active: #1e2023;
+			--main-top-color: #25272b;
+			--top-bar-search: #33363c;
+			--top-bar-search-focus: #40434a;
+			--shadow-primary: #131313;
+			--container-bg: #2c3038;
+			--footer-bg: #2c3038b3;
+			--astro-txt: #ae73e4;
+}
+/*img::before { content: "loading…" }*/
+
+[v-cloak] > * { display:none }
+[v-cloak]::before { content: "loading…" }
