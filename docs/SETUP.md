@@ -1,18 +1,18 @@
 # Laravel Roblox Clone Setup
 Let's get started! First make sure that you have the following software installed on your server:
-- **Apache/Nginx Webserver**
-- **PHP 7.3+**
+- **Apache/Nginx Webserver** 
+- **PHP 7.4+* (Instructions are in PHP.md)
 - **MySQL 5.7+**
-- **Blender 2.79** (Renderer is stuck to this version because I couldn't be bothered enough to make it work with 2.8+)
-
-Alongside this you will also need Google Recaptcha V2 API keys in production. Go [here](https://www.google.com/recaptcha/about/) and click on "Admin Console" to create them. And a PayPal account if you would like to sell currency and membership to your users. You can create a PayPal account [here](https://www.paypal.com).
+- **Blender 2.79** (Renderer is stuck to this version because I couldn't be bothered enough to make it work with 2.8+ instructions are in BLENDER.md)
+- 
+- Alongside this you will also need Google Recaptcha V2 API keys in production. Go [here](https://www.google.com/recaptcha/about/) and click on "Admin Console" to create them. And a PayPal account if you would like to sell currency and membership to your users. You can create a PayPal account [here](https://www.paypal.com).
 
 To get a jumpstart with the webserver/PHP/MySQL part, I recommend installing the LAMP/LEMP stack.
 
 ## 1. Pulling the Repository
 Create a new folder where you want the project files to be stored on your server, and then run this command inside of it:
 ```
-git clone https://github.com/FoxxoSnoot/laravel-roblox-clone.git
+git clone https://github.com/im-aeo/brickplanet-laravel.git
 ```
 
 ## 2. Setting up the Site
@@ -24,7 +24,7 @@ php artisan key:generate
 ```
 
 Then make sure to enter your project name, provide your Recaptcha keys, email information, and database information in the `.env` file, after this be sure to make virtual hosts for your domains. You will need to them for the following services:
-- **Main Website (eg: www.robloxclone.com)
+- **Main Website (eg: www.bp.com)
 - **Storage for thumbnails, uploads, etc (eg: cdn.robloxclone.com)
 - **Administration Panel (eg: ap.robloxclone.com)
 - **Renderer (eg: renderer.robloxclone.com)
