@@ -26,16 +26,16 @@
 return [
     // Renderer
     'DB_HOST'         => 'localhost',
-    'DB_NAME'         => 'site',
-    'DB_USER'         => 'SexyBalls',
-    'DB_PASS'         => 'H5vUx9SY0uIauX!CUv&a4',
+    'DB_NAME'         => 'dbname',
+    'DB_USER'         => 'dbuser',
+    'DB_PASS'         => 'dbpass',
     'SERIOUS_KEY'     => 'secretkey',
     'ALLOWED_TYPES'   => ['item', 'user', 'preview'],
     'FOCUS_ITEMS'     => false,
     'FACES_PNG'       => false,
 
     // Site
-    'SITE_NAME' => 'Detrimo V3',
+    'SITE_NAME' => 'Your site name here',
 
     // Directories
     'DIRECTORIES' => [
