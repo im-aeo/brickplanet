@@ -27,6 +27,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Models\Item;
 use App\Models\Inventory;
+use App\Models\Status;
 use App\Models\ForumThread;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -56,7 +57,23 @@ class HomeController extends Controller
             'items' => $items
         ]);
     }
+  
+public function status(Request $request)
+    {
+        $this->validate($request, [
+            'message' => ['max:255']
+        ]);
 
+        if ($request->message != Auth::user()->status()) {
+            $status = new Status;
+            $status->creator_id = Auth::user()->id;
+            $status->message = $request->message;
+            $status->save();
+        }
+
+        return back()->with('success_message', 'Status has been changed.');
+    }
+  
     public function admin()
     {
         $item = config('site.fake_admin_item_id');

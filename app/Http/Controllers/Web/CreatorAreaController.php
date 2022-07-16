@@ -68,11 +68,11 @@ class CreatorAreaController extends Controller
         $isGroup = $request->has('is_group');
         $price = config('site.group_creation_price');
         $filename = Str::random(50);
-        $dimensions = (!$isGroup) ? 'dimensions:min_width=887,max_height=887,min_height=887,max_height=887' : 'dimensions:min_width=100,min_height=100';
+        $dimensions = (!$isGroup) ? 'dimensions:min_width=12,max_height=887,min_height=12,max_height=887' : 'dimensions:min_width=100,min_height=100';
         $validate = [
             'name' => ['required', 'min:3', 'max:70', 'regex:/^[a-z0-9 .\-!,\':;<>?()\[\]+=\/]+$/i'],
             'description' => ['max:1024'],
-            'template' => ['required', $dimensions, 'mimes:png,jpg,jpeg', 'max:2048']
+            'template' => ['required', $dimensions, 'mimes:png,jpg,jpeg', 'max:204875']
         ];
 
         if ($isGroup) {
