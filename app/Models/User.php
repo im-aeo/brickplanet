@@ -29,6 +29,7 @@ use Carbon\Carbon;
 use App\Models\Group;
 use App\Models\Trade;
 use App\Models\Friend;
+use App\Models\Status;
 use App\Models\Message;
 use App\Models\UserBan;
 use App\Models\Purchase;
@@ -129,7 +130,7 @@ class User extends Authenticatable
         return !empty($this->email_verified_at);
     }
 
-    public function isWearingItem($id)
+public function isWearingItem($id)
     {
         $avatar = $this->avatar();
         $avatar->timestamps = false;
@@ -140,11 +141,15 @@ class User extends Authenticatable
             $column = 'hat_2';
         else if ($avatar->hat_3 == $id)
             $column = 'hat_3';
+        else if ($avatar->hat_4 == $id)
+            $column = 'hat_4';
+        else if ($avatar->hat_5 == $id)
+            $column = 'hat_5';
         else if ($avatar->head == $id)
             $column = 'head';
         else if ($avatar->face == $id)
             $column = 'face';
-        else if ($avatar->gadget == $id)
+        else if ($avatar->tool == $id)
             $column = 'gadget';
         else if ($avatar->tshirt == $id)
             $column = 'tshirt';
@@ -152,13 +157,15 @@ class User extends Authenticatable
             $column = 'shirt';
         else if ($avatar->pants == $id)
             $column = 'pants';
+        else if ($avatar->figure == $id)
+            $column = 'figure';
         else
             return false;
 
         return $avatar->$column == $id;
     }
 
-    public function takeOffItem($id)
+     public function takeOffItem($id)
     {
         $avatar = $this->avatar();
         $avatar->timestamps = false;
@@ -173,7 +180,7 @@ class User extends Authenticatable
             $column = 'head';
         else if ($avatar->face == $id)
             $column = 'face';
-        else if ($avatar->gadget == $id)
+        else if ($avatar->tool == $id)
             $column = 'gadget';
         else if ($avatar->tshirt == $id)
             $column = 'tshirt';
@@ -181,6 +188,8 @@ class User extends Authenticatable
             $column = 'shirt';
         else if ($avatar->pants == $id)
             $column = 'pants';
+        else if ($avatar->figure == $id)
+            $column = 'figure';
         else
             return false;
 
@@ -198,7 +207,14 @@ class User extends Authenticatable
 
         return $total;
     }
+   
+   public function status()
+    {
+        $status = Status::where('creator_id', '=', $this->id)->orderBy('created_at', 'DESC')->first();
 
+        return $status->message ?? null;
+    }
+  
     /**
      * Staff
      */

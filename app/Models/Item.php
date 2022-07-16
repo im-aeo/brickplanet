@@ -107,7 +107,7 @@ class Item extends Model
 
         $url = config('site.storage_url');
 
-        return "{$url}/{$this->thumbnail_url}.png";
+        return "{$url}/thumbnails/{$this->thumbnail_url}.png";
     }
 
     public function slug()
