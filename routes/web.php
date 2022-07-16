@@ -27,6 +27,7 @@ Route::group(['as' => 'home.'], function() {
     Route::get('/', 'HomeController@index')->name('index')->middleware('guest');
     Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard')->middleware('auth');
     Route::get('/admin', 'HomeController@admin')->name('admin')->middleware('auth');
+     Route::post('/status', 'HomeController@status')->name('status');
 });
 
 Route::group(['as' => 'info.', 'prefix' => 'info'], function() {
