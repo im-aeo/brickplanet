@@ -1,9 +1,8 @@
-# Laravel Roblox Clone Setup
 Let's get started! First make sure that you have the following software installed on your server:
 - **Apache/Nginx Webserver** 
-- **PHP 7.4+* (Instructions are in PHP.md)
+- **PHP 7.4+* (Instructions are in ALL.md)
 - **MySQL 5.7+**
-- **Blender 2.79** (Renderer is stuck to this version because I couldn't be bothered enough to make it work with 2.8+ instructions are in BLENDER.md)
+- **Blender 2.79** (Renderer is stuck to this version because I couldn't be bothered enough to make it work with 2.8+ instructions are in All.md)
 - 
 - Alongside this you will also need Google Recaptcha V2 API keys in production. Go [here](https://www.google.com/recaptcha/about/) and click on "Admin Console" to create them. And a PayPal account if you would like to sell currency and membership to your users. You can create a PayPal account [here](https://www.paypal.com).
 
