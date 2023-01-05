@@ -3,6 +3,5 @@ Originally written in June-July 2022 to get better with Laravel and to have some
 
 This Repository is maintained.
 
-Also nothing is cached so I highly dont reccomend running in production.
-
+Caching has been added. enjoy
 ## updates soon
