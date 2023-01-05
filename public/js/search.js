@@ -30,7 +30,7 @@ $(() => {
 
         if (search.length == 0) {
             $('#navbarSearchResults').hide();
-            $('#navbarSearchResults').html('');
+            $('#navbarSearchResults').html('<div style="padding:5px 15px;">Search by username, games, store items, and groups</div>');
             return;
         }
 

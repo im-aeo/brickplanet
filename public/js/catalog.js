@@ -111,5 +111,5 @@ function search(category, page, search)
                 <button class="btn btn-sm btn-success" onclick="search('${currentCategory}', ${nextPage}, '${currentSearch}')" ${nextDisabled}>&raquo;</button>
             </div>`);
         }
-    }).fail(() => $('#items').html('Unable to get items.'));;
+    }).fail(() => $('#items-div').html('Unable to get items.'));;
 }

@@ -145,41 +145,55 @@ function getWallPosts(page)
         $('#wall').html('');
 
         if (typeof data.error !== 'undefined')
-            return $('#wall').html(data.error);
+            return $('#wall_errors').html(data.error);
 
         $.each(data.posts, function() {
             var modTools = '';
-            var togglePin = (this.is_pinned) ? 'Unpin' : 'Pin';
-
+            var togglePin = (this.is_pinned) ? 'Unpin Post' : 'Pin Post';
+            var PinIcon = (this.is_pinned) ? `<i class="material-icons group-pin" title="This is a pinned post">pin_drop</i>` : ``;
             if (canModerateWall)
                 modTools = `
-                <div class="mt-3">
-                    <a onclick="togglePinWallPost(${this.id})">${togglePin}</a>
-                    <span class="ml-1 mr-1">|</span>
-                    <a onclick="deleteWallPost(${this.id})">Delete</a>
-                </div>`;
+               <span class="wall-settings" data-toggle="wall-${this.id}-dropdown"><i class="material-icons">settings</i></span>
+											<div class="dropdown-pane creator-area-dropdown" id="wall-${this.id}-dropdown" data-dropdown data-hover="true" data-hover-pane="true">
+		<ul>
+                                            
+               <li>
+               <button onclick="togglePinWallPost(${this.id})">${togglePin}</button>
+               </li>
+               
+               <li>
+               <button onclick="deleteWallPost(${this.id})">Delete Post</button>
+               </li>
+               
+        </ul>
+	</div>`;
 
             $('#wall').append(`
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-3 col-md-2">
-                            <a href="${this.creator.url}">
-                                <img src="${this.creator.thumbnail}">
-                            </a>
-                        </div>
-                        <div class="col-9 col-md-10">
-                            <div class="text-truncate mb-2">
-                                <a href="${this.creator.url}" style="font-size:18px;">${this.creator.username}</a>
-                                <span class="hide-sm">&nbsp;&nbsp;</span>
-                                <br class="show-sm-only">
-                                <span class="text-muted" style="font-size:13px;"><i class="fas fa-clock"></i> ${this.time_ago}</span>
-                            </div>
-                            ${this.body}
-                        </div>
-                    </div>
-                </div>
-            </div>`);
+            <div class="wall-post">
+								<div class="wall-post-header">
+									<div class="grid-x grid-margin-x align-middle">
+											<div class="shrink cell no-margin">
+												${PinIcon}
+											</div>
+										<div class="shrink cell no-margin">
+											<div style="background-image:url(${this.creator.thumbnail});background-size:cover;" class="wall-post-avatar"></div>
+										</div>
+										<div class="auto cell no-margin">
+											
+											<a href="${this.creator.url}" class="wall-post-username">${this.creator.username}</a>
+										</div>
+										<div class="shrink cell no-margin right">
+											<span class="wall-post-time">${this.time_ago}</span>
+                                                    ${modTools}
+										</div>
+									</div>
+								</div>
+								<div class="wall-post-main">
+									${this.body}
+								</div>
+							</div> 
+                          
+				</div>`);
         });
 
         if (data.total_pages > 1) {
