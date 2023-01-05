@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400');
+
+html, body {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	background: #F5F5F5;
+}
+
+.grid-x, .no-margin {
+	margin: 0 !important;
+}
+
+.site-header.with-all {
+	background: #FFFFFF;
+	padding: 10px 0;
+	box-shadow: 0 2px 1px #CCC;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.site-header-margin {
+	height: 105px;
+}
+
+.site-header.without-bg-and-shadow {
+	background: rgba(0,0,0,0.6);
+	padding: 15px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: #FFFFFF;
+}
+
+.site-header .logo-ico {
+	display: inline-block;
+	vertical-align: middle;
+	background:url(../img/BCIcon100.png);
+	width: 35px;
+	height: 35px;
+	background-size: cover;
+}
+
+.site-header .logo-divider {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 10px;
+	width: 1px;
+	height: 35px;
+}
+
+.site-header.with-all .logo-divider {
+	background: #DEDEDE;
+}
+
+.site-header .logo-right {
+	display: inline-block;
+	vertical-align: middle;
+	height: 35px;
+	line-height: 35px;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-size: 20px;
+	cursor: default;
+}
+
+.site-header.without-bg-and-shadow .logo-right {
+	text-shadow: 0 0 2px #777777;
+}
+
+.site-header.with-all .logo-divider {
+	color: #222222;
+}
+
+.site-header ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.site-header ul li {
+	margin: 0;
+	padding: 0;
+	float: left;
+	margin: 0 15px;
+}
+
+.site-header ul li a {
+	font-weight: 600;
+	letter-spacing: 0.25px;
+	font-size: 18px;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+.site-header.with-all ul li a {
+	color: #444444;
+}
+
+.site-header.without-bg-and-shadow ul li a {
+	color: #FFFFFF;
+	text-shadow: 0 0 2px #777777;
+}
+
+.site-header.with-all ul li a:hover {
+	color: #0288D1;
+}
+
+.site-header.without-bg-and-shadow ul li a:hover {
+	color: #efefef;
+}
+
+.site-wrapper {
+	position: relative;
+	min-height: 100%;
+}
+
+.content-wrapper {
+	padding-bottom: 194px;
+}
+
+.site-footer {
+	background: #333333;
+	padding: 35px 0;
+	height: 194px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.site-footer .footer-logo-ico {
+	display: inline-block;
+	vertical-align: middle;
+	background:url(../img/BCIcon100.png);
+	width: 35px;
+	height: 35px;
+	background-size: cover;
+}
+
+.site-footer .footer-copyright {
+	font-size: 18px;
+	margin-top: 5px;
+	color: #E5E5E5;
+}
+
+.site-footer .footer-notes {
+	color: #D9D9D9;
+	font-size: 14px;
+	padding-top: 15px;
+	width: 60%;
+	margin: 0 auto;
+	text-align: left;
+	letter-spacing: 0.35px;
+}
+
+.container-push {
+	margin-top: 35px;
+}
+
+.home-content-white {
+	background: #FFFFFF;
+	padding: 50px 25px;
+	box-sizing: border-box;
+}
+
+.home-content-grey {
+	background: transparent;
+	padding: 50px 25px;
+	box-sizing: border-box;
+}
+
+.home-teaser {
+	background:url(../img/teaseimg.jpg) no-repeat center;
+	background-size: cover;
+	width: 100%;
+	height: 700px;
+}
+
+.home-big-title-text {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 38px;
+	font-weight: 300;
+	width: 60%;
+	margin: 0 auto;
+	margin-bottom: 25px;
+}
+
+.home-text {
+	line-height: 1.5;
+	color: #333;
+	letter-spacing: 0.5px;
+	font-size: 18px;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.home-button-learnmore {
+	width: 60%;
+	text-align: center;
+	margin: 41px auto 0px auto;
+}
+
+.home-button-learnmore a {
+	border: 1px solid #51A100;
+	background: transparent;
+	color: #51A100;
+	text-transform: uppercase;
+	border-radius: 4px;
+	padding: 10px 25px;
+	font-weight: 600;
+	font-size: 16px;
+	display: inline-block;
+}
+
+.home-button-learnmore a:hover {
+	background: #51A100;
+	color: #FFFFFF;
+}
+
+.page-title {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 34px;
+	font-weight: 300;
+	margin-bottom: 25px;
+}
+
+.job-container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.job-content {
+	background: #FFFFFF;
+	box-shadow: 1px 1px 4px #BBB;
+	padding: 15px 25px;
+	border-radius: 3px;
+}
+
+.job-pos {
+	padding: 15px 0;
+}
+
+.job-pos-divider {
+	height: 1px;
+	background: #DEDEDE;
+	width: 100%;
+}
+
+.job-pos-title {
+	font-size: 21px;
+	font-weight: 400;
+	color: #555;
+}
+
+.job-pos-category {
+	font-size: 14px;
+	color: #555;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+}
+
+.ico-group i, .ico-group span {
+	vertical-align: middle;
+	margin-right: 5px;
+	line-height: 1.25;
+	cursor: default;
+}
+
+.ico-group {
+	margin-right: 10px;
+}
+
+.ico-group i {
+	color: #777;
+	font-size: 24px;
+}
+
+.ico-group span {
+	color: #333333;
+	font-size: 14px;
+}
+
+.job-learnmore {
+	border: 1px solid #51A100;
+	background: transparent;
+	color: #51A100;
+	text-transform: uppercase;
+	border-radius: 4px;
+	padding: 8px 20px;
+	font-weight: 600;
+	font-size: 16px;
+	display: inline-block;
+	line-height: 1;
+}
+
+a.job-learnmore:hover {
+	border: 1px solid #387000;
+	color: #387000;
+}
+
+.preview-title {
+	font-size: 32px;
+	font-weight: 300;
+	font-family: Quicksand, sans-serif;
+}
+
+.preview-content {
+	background: #FFFFFF;
+	box-shadow: 1px 1px 4px #BBB;
+	padding: 25px;
+	border-radius: 3px;
+	font-size: 14px;
+	margin-top: 25px;
+}
+
+.preview-content h3 {
+	font-family: Quicksand, sans-serif;
+	font-weight: 300;
+	font-size: 24px;
+}
+
+.preview-divider {
+	margin: 15px 0;
+	height: 1px;
+	width: 100%;
+	background: #DEDEDE;
+}
+
+.preview-apply {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.preview-apply-button {
+	outline: none;
+	border: 1px solid #07AEE6;
+	background: transparent;
+	color: #07AEE6;
+	text-transform: uppercase;
+	border-radius: 4px;
+	padding: 8px 20px;
+	font-weight: 600;
+	font-size: 16px;
+	display: inline-block;
+	line-height: 1;
+	cursor: pointer;
+	letter-spacing: 0.5px;
+}
+
+.preview-apply-button:hover {
+	border: 1px solid #0695C4;
+	color: #0695C4;
+}
+
+.apply-button {
+	outline: none;
+	border: 1px solid #07AEE6;
+	background: transparent;
+	color: #07AEE6;
+	text-transform: uppercase;
+	border-radius: 4px;
+	padding: 8px 20px;
+	font-weight: 600;
+	font-size: 16px;
+	display: inline-block;
+	line-height: 1;
+	cursor: pointer;
+	letter-spacing: 0.5px;
+}
+
+.apply-button:hover {
+	border: 1px solid #0695C4;
+	color: #0695C4;
+}
+
+.apply-button-push {
+	margin-top: 25px;
+}
+
+.apply-title {
+	font-size: 32px;
+	font-weight: 300;
+	font-family: Quicksand, sans-serif;
+	margin-bottom: 15px;
+}
+
+.apply-title .normal {
+	font-weight: 400;
+}
+
+.preview-content input[type='text'], textarea, select {
+	padding: 8px 20px;
+	font-size: 15px;
+	border: 1px solid #C9C9C9;
+	margin-bottom: 15px;
+	outline: none;
+	color: #343434;
+	display: block;
+	width: 100%;
+	resize: none;
+}
+
+.preview-content input[type='date'] {
+	padding: 0 20px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 15px;
+	border: 1px solid #C9C9C9;
+	margin-bottom: 15px;
+	outline: none;
+	color: #343434;
+	display: block;
+	width: 100%;
+	resize: none;
+}
+
+.experience-grid {
+	padding: 5px 0;
+}
+
+.work-experience {
+	width: calc(22.50% - 1.25rem);
+	margin-right: 0.625rem;
+	margin-left: 0.625rem;
+}
+
+.work-experience-right {
+	width: calc(10% - 1.25rem);
+	margin-right: 0.625rem;
+	margin-left: 0.625rem;
+	line-height: 1.15;
+}
+
+.work-experience-right a {
+	color: #333;
+	font-weight: 600;
+}
+
+.work-experience-right a:hover {
+	color: #666;
+}
+
+.application-divider {
+	margin: 25px 0;
+	height: 1px;
+	width: 100%;
+	background: #E3E3E3;
+}
+
+.submitted-container {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.submitted-content {
+	background: #FFFFFF;
+	box-shadow: 1px 1px 4px #BBB;
+	padding: 25px;
+	border-radius: 3px;
+	font-size: 18px;
+}
+
+.submitted-title {
+	font-size: 28px;
+	font-weight: 300;
+	font-family: Quicksand, sans-serif;
+	margin-bottom: 15px;
+}
+
+.alert-danger {
+	background-color: #f2dede;
+	border-color: #ebcccc;
+	color: #a94442;
+}
+
+.alert {
+	padding: .75rem 1.25rem;
+	margin-bottom: 1rem;
+	border: 1px solid transparent;
+	border-radius: .25rem;
+}
+
+.about-teaser {
+	background:url(../img/HuntsvilleAL.jpg) no-repeat center;
+	background-size: cover;
+	width: 100%;
+	height: 650px;
+}
+
+.about-content {
+	background: #FFFFFF;
+	padding: 35px 15px;
+}
+
+.about-content-shrink {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.apply-content-shrink {
+	width: 65%;
+	margin: 0 auto;
+}
+
+.preview-content-shrink {
+	width: 65%;
+	margin: 0 auto;
+}
+
+.about-title {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 38px;
+	font-weight: 300;
+	margin-bottom: 25px;
+}
+
+.about-text {
+	font-size: 18px;
+	letter-spacing: 0.5px;
+	margin-bottom: 25px;
+}
+
+.team-title {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 38px;
+	font-weight: 300;
+	margin-bottom: 25px;
+}
