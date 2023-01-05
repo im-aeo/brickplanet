@@ -26,16 +26,16 @@
 return [
     // Renderer
     'DB_HOST'         => 'localhost',
-    'DB_NAME'         => 'dbname',
-    'DB_USER'         => 'dbuser',
-    'DB_PASS'         => 'dbpass',
-    'SERIOUS_KEY'     => 'secretkey',
+    'DB_NAME'         => 'avatoria_db',
+    'DB_USER'         => 'root',
+    'DB_PASS'         => 'USpooky1!s',
+    'SERIOUS_KEY'     => 'key',
     'ALLOWED_TYPES'   => ['item', 'user', 'preview'],
     'FOCUS_ITEMS'     => false,
     'FACES_PNG'       => false,
 
     // Site
-    'SITE_NAME' => 'Your site name here',
+    'SITE_NAME' => 'BrickPlanet',
 
     // Directories
     'DIRECTORIES' => [
@@ -49,12 +49,12 @@ return [
 
     // Avatar
     'AVATARS' => [
-        'DEFAULT' => '/var/www/html/renderer/blend/BPRAvatarLighting.blend',
+        'DEFAULT' => '/var/www/html/renderer/blend/bp.blend',
         'GADGET'  => '/var/www/html/renderer/blend/bpavgear.blend',
     ],
 
     // Headshot Camera
-    'HEADSHOT_CAMERA' => [
+   'HEADSHOT_CAMERA' => [
         'LOCATION' => [
             'X' => '-0.956932',
             'Y' => '-2.44959',
@@ -65,6 +65,21 @@ return [
             'X' => '69.6752',
             'Y' => '-0.00183',
             'Z' => '-18.3953'
+        ]
+    ],
+  
+    // Avatar Camera
+    'AVATAR_CAMERA' => [
+        'LOCATION' => [
+            'X' => '-1.73156',
+            'Y' => '-5.86332',
+            'Z' => '5.88582'
+        ],
+
+        'ROTATION' => [
+            'X' => '65.56214',
+            'Y' => '-0.3928324',
+            'Z' => '-13.81374'
         ]
     ],
 

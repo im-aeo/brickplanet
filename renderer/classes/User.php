@@ -17,7 +17,7 @@ class User
         $this->filename = $filename;
     }
 
-    /*public function deleteAvatar(){
+    public function deleteAvatar(){
         $getAvata = $this->db->prepare('SELECT * FROM user_avatars WHERE user_id = :user_id');
         $getAvata->bindValue(':user_id', $this->user->id, PDO::PARAM_INT);
         $getAvata->execute();
@@ -27,7 +27,7 @@ class User
         if($gaq->image != null){
             unlink("/var/www/storage/thumbnails/{$gaq->image}.png");
         }
-    }*/
+    }
     
     public function render()
     {

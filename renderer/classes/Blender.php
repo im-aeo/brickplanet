@@ -29,6 +29,8 @@ class Blender
         $this->code('fin.append(g)', 1);
         $this->code('fin.append(b)', 1);
         $this->code('return tuple(fin)', 1);
+        $this->code('bpy.context.scene.render.engine = "CYCLES"
+', 1);
     }
     
     public function comment($comment)
@@ -54,7 +56,7 @@ class Blender
         $tmpFile = "{$tmpDir}/{$tmpFilename}.py";
         
         file_put_contents($tmpFile, $this->python);
-        exec(escapeshellcmd("/var/www/blender2.79b/blender --background --python {$tmpFile}"));
+        exec("/var/www/aeo-blender/blender --background --python {$tmpFile}");
     }
     
     public function importBlend($filename)
@@ -181,6 +183,7 @@ class Blender
     
     public function saveThumbnail($filename, $imageSize)
     {
+        $camera = config('AVATAR_CAMERA');
         $imageSize = config('IMAGE_SIZES', strtoupper($imageSize)) ?? 512;
         $directory = config('DIRECTORIES', 'THUMBNAILS');
         $filename = "{$directory}/{$filename}.png";
@@ -196,6 +199,7 @@ class Blender
             $this->code('bpy.ops.view3d.camera_to_view_selected()');
         }
         
+      
         $this->code('origAlphaMode = bpy.data.scenes["Scene"].render.alpha_mode');
         $this->code('bpy.data.scenes["Scene"].render.alpha_mode = "TRANSPARENT"');
         $this->code('bpy.data.scenes["Scene"].render.alpha_mode = origAlphaMode');
@@ -210,7 +214,7 @@ class Blender
         $camera = config('HEADSHOT_CAMERA');
         $directory = config('DIRECTORIES', 'THUMBNAILS');
         $imageSize = config('IMAGE_SIZES', 'USER_HEADSHOT');
-        $filename = "{$directory}/{$filename}_headshot.png";
+        $filename = "{$directory}/{$filename}-thumb.png";
         
         $this->code('camera = bpy.data.objects["Camera"]');
         $this->code("camera.location.x = {$camera['LOCATION']['X']}");

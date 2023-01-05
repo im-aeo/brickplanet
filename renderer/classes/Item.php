@@ -55,11 +55,11 @@ class Item
                 if ($focus)
                     $focused[] = 'Head';
                 else
-                    $blender->removeObjects(['Torso', 'LeftArm', 'LeftHand', 'RightArm', 'RightHand', 'LeftLeg', 'RightLeg']);
+                    $blender->removeObjects(['Head', 'Torso', 'LeftArm', 'LeftHand', 'RightArm', 'RightHand', 'LeftLeg', 'RightLeg']);
                 break;
             case 'face':
-                $blender->removeObjects(['Torso', 'LeftArm', 'LeftHand', 'RightArm', 'RightHand', 'LeftLeg', 'RightLeg']);
-                $focused[] = 'Head';
+               $focused[] = 'Head';
+               $blender->removeObjects(['Torso', 'LeftArm', 'LeftHand', 'RightArm', 'RightHand', 'LeftLeg', 'RightLeg']);
                 break;
             case 'gadget':
                 $blender->importModel('gadget', $this->item->filename);
@@ -78,14 +78,12 @@ class Item
                 $focused[] = 'LeftArm';
                 //$focused[] =  'LeftHand';
                 $focused[] = 'RightArm';
-                $blender->removeObjects(['Head', 'LeftLeg', 'RightLeg']);
                 break;
             case 'pants':
                 $blender->setPants($this->item->filename);
                 $focused[] = 'LeftLeg';
                 //$focused[] =  'LeftHand';
                 $focused[] = 'RightLeg';
-                $blender->removeObjects(['Head', 'Torso', 'LeftArm', 'LeftHand', 'RightArm', 'RightHand']);
                 break;
             case 'clothing_bundle':
                 $blender->setShirt($this->clothingFilenames[0]);
